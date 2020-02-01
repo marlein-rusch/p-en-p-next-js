@@ -1,12 +1,16 @@
 import React from "react";
 import Counter from "../src/components/Counter";
+import Head from 'next/head';
 import { increment } from "../src/actions/counterActions";
 
 function index() {
   return (
-    <div>
-      <Counter />
-    </div>
+      <div>
+        <Head>
+            <link href="../static/index.css" rel="stylesheet" />
+        </Head>
+        <Counter />
+      </div>
   );
 }
 

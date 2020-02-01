@@ -6,11 +6,16 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "nextstart": "next start",
+    "sass": "node-sass -w styles/index.scss -o static/",
+    "start": "concurrently \"yarn sass\" \"yarn dev\""
   },
   "author": "Jibin Thomas",
   "dependencies": {
+    "bootstrap": "^4.4.1",
+    "concurrently": "^5.1.0",
     "next": "^9.1.1",
+    "node-sass": "^4.13.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-redux": "^7.1.1",
