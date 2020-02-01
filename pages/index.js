@@ -2,6 +2,7 @@ import React from "react";
 import Counter from "../src/components/Counter";
 import Head from 'next/head';
 import fetch from 'isomorphic-unfetch';
+import Header from '../src/components/Header';
 
 import { addFetchToState } from "../src/actions/fetchActions";
 
@@ -11,6 +12,7 @@ function index() {
             <Head>
                 <link href="../static/index.css" rel="stylesheet" />
             </Head>
+            <Header />
             <Counter />
         </div>
     );
@@ -22,7 +24,7 @@ index.getInitialProps = async function ({ reduxStore }) {
     const fetchedHistoryFragments = await fetch('http://localhost:1337/history-fragments');
     const fetchedRules = await fetch('http://localhost:1337/rules');
     const fetchedWords = await fetch('http://localhost:1337/words');
-    
+
     const events = await fetchedEvents.json();
     const announcements = await fetchedAnnouncements.json();
     const historyFragments = await fetchedHistoryFragments.json();
