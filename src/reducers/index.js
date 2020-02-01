@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import counterReducer from "./counterReducer";
+import dataFetchReducer from "./dataFetchReducer";
 
 export default combineReducers({
-  counterReducer
+    dataFetchReducer
 });

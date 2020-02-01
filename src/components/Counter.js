@@ -1,27 +1,23 @@
 import React from "react";
 import { connect } from "react-redux";
-import { increment, decrement, reset } from "../actions/counterActions";
+import { increment } from "../actions/fetchActions";
 
-function Counter({ counter, increment, decrement, reset }) {
+function Counter({ counter, increment }) {
   return (
-    <div>
-      <p>{counter}</p>
+    <div className="container py-3">
+      <h1>{counter}</h1>
       <button onClick={increment}>INCREMENT</button>
-      <button onClick={decrement}>DECREMENT</button>
-      <button onClick={reset}>RESET</button>
     </div>
   );
 }
 
 const mapStateToProps = state => ({
-  counter: state.counterReducer.counter
+  counter: state.dataFetchReducer.counter
 });
 
 const mapDispatchToProps = dispatch => {
   return {
     increment: () => dispatch(increment()),
-    decrement: () => dispatch(decrement()),
-    reset: () => dispatch(reset())
   };
 };
 
