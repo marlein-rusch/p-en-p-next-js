@@ -1,20 +1,15 @@
 import React from "react";
 import Counter from "../src/components/Counter";
-import Head from 'next/head';
 import fetch from 'isomorphic-unfetch';
-import Header from '../src/components/Header';
+import MyLayout from '../src/components/MyLayout';
 
 import { addFetchToState } from "../src/actions/fetchActions";
 
 function index() {
     return (
-        <div>
-            <Head>
-                <link href="../static/index.css" rel="stylesheet" />
-            </Head>
-            <Header />
+        <MyLayout>
             <Counter />
-        </div>
+        </MyLayout>
     );
 }
 
