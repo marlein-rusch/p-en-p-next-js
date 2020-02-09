@@ -5,13 +5,12 @@ import slugify from "./../helpers/slugify";
 
 const Header = props => {
 	const { language, menuItems } = props;
-	console.log(menuItems.en[1].category)
 
 	return (
 		<div className="p-3">
 			{menuItems[`${language}`].map( menuCategory => (
 				<Link href={slugify(menuCategory.category)}>
-					{menuCategory.category}
+					 <a>{menuCategory.menuCategory}</a>
 				</Link>
 			))}
 		</div>
