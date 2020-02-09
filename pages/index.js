@@ -1,7 +1,7 @@
 import React from "react";
 import Counter from "../src/components/Counter";
-import fetch from 'isomorphic-unfetch';
-import MyLayout from '../src/components/MyLayout';
+import fetch from "isomorphic-unfetch";
+import MyLayout from "../src/components/MyLayout";
 
 import { addFetchToState } from "../src/actions/fetchActions";
 
@@ -14,11 +14,11 @@ function index() {
 }
 
 index.getInitialProps = async function ({ reduxStore }) {
-    const fetchedEvents = await fetch('http://localhost:1337/events');
-    const fetchedAnnouncements = await fetch('http://localhost:1337/announcements');
-    const fetchedHistoryFragments = await fetch('http://localhost:1337/history-fragments');
-    const fetchedRules = await fetch('http://localhost:1337/rules');
-    const fetchedWords = await fetch('http://localhost:1337/words');
+    const fetchedEvents = await fetch("http://localhost:1337/events");
+    const fetchedAnnouncements = await fetch("http://localhost:1337/announcements");
+    const fetchedHistoryFragments = await fetch("http://localhost:1337/history-fragments");
+    const fetchedRules = await fetch("http://localhost:1337/rules");
+    const fetchedWords = await fetch("http://localhost:1337/words");
 
     const events = await fetchedEvents.json();
     const announcements = await fetchedAnnouncements.json();
