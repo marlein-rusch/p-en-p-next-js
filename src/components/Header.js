@@ -9,8 +9,10 @@ const Header = props => {
 	return (
 		<div className="p-3">
 			{menuItems[`${language}`].map( menuCategory => (
-				<Link href={slugify(menuCategory.category)}>
-					 <a>{menuCategory.menuCategory}</a>
+				<Link
+					key={slugify(menuCategory.category)}
+					href={slugify(menuCategory.category)}>
+					 <a>{menuCategory.category}</a>
 				</Link>
 			))}
 		</div>
