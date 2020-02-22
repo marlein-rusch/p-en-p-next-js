@@ -1,4 +1,4 @@
-import { ADD_FETCHED_CONTENT_PER_CATEGORY, INCREMENT } from "../actions/types";
+import { ADD_FETCHED_CONTENT_PER_CATEGORY, INCREMENT, SWITCH_LANGUAGE } from "../actions/types";
 
 const initialState = {
 	menuItems: {
@@ -71,6 +71,11 @@ export default function(state = initialState, action) {
 			return {
 				...state,
 				counter: state.counter + 1
+			};
+		case SWITCH_LANGUAGE:
+			return {
+				...state,
+				language: state.language === "nl" ? "en" : "nl"
 			};
 		case ADD_FETCHED_CONTENT_PER_CATEGORY:
 			return {
