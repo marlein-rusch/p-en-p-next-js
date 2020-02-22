@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux"
 import MyLayout from "../../src/components/MyLayout";
-import AboutUsComponent from "../../src/pages/about-us";
+import AboutUsComponent from "../../src/pages/AboutUs";
 import { addFetchToState } from "./../../src/actions/fetchActions";
 
 function AboutUs(props) {
