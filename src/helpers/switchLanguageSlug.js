@@ -1,3 +1,6 @@
+import { initialState } from "../reducers/dataFetchReducer";
+import slugify from "./slugify";
+
 function getKeyByValue(object, value) {
     return Object.keys(object).find(key => object[key] === value);
 }
@@ -17,13 +20,11 @@ export default function switchLanguageSlug(slug) {
     }
 }
 
-const appRoutes = [
-	{
-		nl: "/nl",
-		en: "/en"
-	},
-	{
-		nl: "/nl/over-ons",
-		en: "/en/about-us"
-	}
-];
+const appRoutes = initialState.menuItems.nl.map((dutchMenuItem, index) => (
+    { 
+        // E.g. "nl/over-ons"
+        nl: `/nl/${slugify(dutchMenuItem.category)}`,
+        // E.g. "en/about-us"
+        en: `/en/${slugify(initialState.menuItems.en[index].category)}`,
+    }
+));

@@ -1,6 +1,6 @@
 import { ADD_FETCHED_CONTENT_PER_CATEGORY, INCREMENT, SWITCH_LANGUAGE } from "../actions/types";
 
-const initialState = {
+export const initialState = {
 	menuItems: {
 		nl: [
 			{
