@@ -10,7 +10,9 @@ const MyLayout = props => {
 				<link href="./../static/index.css" rel="stylesheet" />
 			</Head>
 			<Header />
-			{props.children}
+			<div className="website-body">
+				{props.children}
+			</div>
 		</div>
 	);
 };

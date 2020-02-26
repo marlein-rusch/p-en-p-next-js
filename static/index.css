@@ -7140,3 +7140,29 @@ a.text-dark:hover, a.text-dark:focus {
 
 .no-decoration {
   text-decoration: none; }
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 2px 0 rgba(45, 40, 70, 0.2);
+  padding: 10px 0 15px;
+  margin-bottom: 4.166666666666667vw;
+  z-index: 6;
+  transition: top 0.3s; }
+  .header .website-logo {
+    vertical-align: middle;
+    height: 30px; }
+  .header .hamburger-logo {
+    float: right;
+    width: 25px;
+    cursor: pointer;
+    margin-top: 6px; }
+  .header .desktop-menu {
+    float: right;
+    margin-top: 6px; }
+
+.website-body {
+  margin-top: 5rem; }

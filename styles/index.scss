@@ -1,7 +1,12 @@
 @import './_variables.scss';
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 @import './_bootstrap-helpers.scss';
+@import './_header.scss';
 
 body {
    //whatever
+}
+
+.website-body {
+   margin-top: 5rem;
 }
